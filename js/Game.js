@@ -2,7 +2,7 @@ class Game{
     constructor(){
 
     } 
-    gameState(){
+    getState(){
         var gamestateRef = database.ref('gameState');
         gamestateRef.on("value",function(data){
         gameState=data.val();
@@ -15,7 +15,7 @@ class Game{
 
     }  
   start(){
-      if(gamestate===0){
+      if(gameState===0){
       form = new Form();
       form.display();
       player = new Player();
